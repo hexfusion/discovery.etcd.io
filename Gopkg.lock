@@ -17,11 +17,9 @@
   version = "v1.3.0"
 
 [[projects]]
-  digest = "1:889cf76e266d0dd9aa3d2b14ef10d6134e5ea1661b9cb7dcb9ae7956ef9db605"
+  digest = "1:968f9ee97c521616063a582e791c27124bef68b8135a38fae96bc01f300631e4"
   name = "github.com/coreos/etcd"
-  packages = [
-    "client"
-  ]
+  packages = ["client"]
   pruneopts = "UT"
   revision = "fca8add78a9d926166eb739b8e4a124434025ba3"
   version = "v3.3.9"
@@ -78,7 +76,7 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:bfc758d5a03d57d97226fac6934551c01bd76612adb119c177395b057a0a46db"
+  digest = "1:8f13f978d35181fada0ea713c14a224f2b329fa91c13438b2811331ecd8b16e1"
   name = "github.com/gogo/protobuf"
   packages = [
     "gogoproto",
@@ -90,7 +88,7 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:00d2397a48fae93f02d0de5d3fd4ce3a22edc7499b3178faf57fc319f5d965c9"
+  digest = "1:69d5e4ea47a10826ceeacc88f99b1f3e509b07690cee667d70e13b5dd505bdcc"
   name = "github.com/golang/protobuf"
   packages = [
     "jsonpb",
@@ -398,11 +396,9 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:7e6d7e1a44eeefc8cd35d6445042f246702656a6597987db850c30a11f2d65d5"
+  digest = "1:225b3867d029a28ad09f74cb483c554af54d7c11183aa00958fc1baacca9b76b"
   name = "golang.org/x/sys"
-  packages = [
-    "unix",
-  ]
+  packages = ["unix"]
   pruneopts = "UT"
   revision = "56ede360ec1c541828fb88741b3f1049406d28f5"
 
