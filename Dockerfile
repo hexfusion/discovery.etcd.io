@@ -4,5 +4,6 @@ EXPOSE 8087
 
 COPY . /go/src/github.com/coreos/discovery.etcd.io
 RUN go install -v github.com/coreos/discovery.etcd.io
+RUN go install -v github.com/coreos/discovery.etcd.io/cmd/etcd-purge
 
 CMD ["discovery.etcd.io"]

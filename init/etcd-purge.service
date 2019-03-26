@@ -1,0 +1,23 @@
+[Unit]
+Description=etcd-purge for discovery service
+Documentation=https://github.com/coreos/discovery.etcd.io
+
+[Service]
+Restart=always
+RestartSec=5s
+TimeoutStartSec=0
+LimitNOFILE=40000
+
+ExecStartPre=/usr/bin/docker quay.io/coreos/discovery.etcd.io:latest
+
+ExecStart=/usr/bin/docker run \
+  --rm \
+  --name etcd-purge \
+  --ulimit nofile=262144:262144 \
+  quay.io/coreos/discovery.etcd.io:latest \
+  /bin/sh -c "etcd-purge -logtostderr -endpoints=http://127.0.0.1:2379 -dir=_etcd/registry -timestamp-dir=purge_ts -dry=false -purge-interval=30s -keep-interval=168h -old-v2cluster"
+
+ExecStop=/usr/bin/docker rm --force etcd-purge
+
+[Install]
+WantedBy=multi-user.target

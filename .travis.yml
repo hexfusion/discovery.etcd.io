@@ -10,4 +10,4 @@ install:
 - go get -v -d github.com/coreos/discovery.etcd.io
 
 script:
-- OS=linux  GOARCH=amd64 ETCD_VERSIONS="v3.2.24 v3.3.9" ./tests.sh
+- OS=linux GOARCH=amd64 ETCD_VERSIONS="v3.2.24 v3.3.9" ./tests.sh

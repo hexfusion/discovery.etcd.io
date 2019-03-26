@@ -77,6 +77,9 @@ done
 echo "Building discovery.etcd.io..."
 go build -v -o ./bin/discovery .
 
+echo "Building etcd-purge tool..."
+go build -v -o ./bin/etcd-purge ./cmd/etcd-purge
+
 echo "Running tests..." $TESTS
 EXPECT_DEBUG=1 go test -v $TESTS;
 EXPECT_DEBUG=1 go test -v -race $TESTS;
